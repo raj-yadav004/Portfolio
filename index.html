@@ -19,33 +19,76 @@
     <header class="header">
         <a href="#" id="logo">Portfolio</a>
         <nav id="nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Skill</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#" style="--i:3">Skill</a>
+            <a href="#" style="--i:4">Portfolio</a>
+            <a href="#" style="--i:5">Contact</a>
         </nav>
+        <span class="hamburger-menu"><i class='bx bx-menu-alt-left '></i></span>
     </header>
     <section id="home">
         <div id="home-content">
             <span id="hero-content">
                 <h3>Hello it's Me</h3>
                 <h1>Raj Yadav</h1>
-                <h3>And I'm a <span id="profession" > Web Developer</span></h3>
-               
+                <h3>And I'm a <span id="profession"> Web Developer</span></h3>
+
             </span>
             <div id="smi">
-                <a href="#" aria-label="Open facebook"><i class='bx bxl-facebook'></i></a>
-                <a href="#" aria-label="Open instagram"><i class='bx bxl-instagram'></i></a>
-                <a href="#" aria-label="Open Linkedin"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" style="--i:6" aria-label="Open facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="#" style="--i:7" aria-label="Open instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="#" style="--i:8" aria-label="Open Linkedin"><i class='bx bxl-linkedin'></i></a>
             </div>
-            <a id="hero-btn" href="#">More About Me</a>
+            <a class="hero-btn" href="#">More About Me</a>
         </div>
         <div id="home-image">
             <img id="hero-image" src="assets/images/rajimg.png" alt="images">
 
         </div>
 
+    </section>
+
+
+    <section id="about">
+        <div id="about-avatar-frame">
+            <img id="about-avatar" src="assets/images/avatar3.png" alt="images">
+        </div>
+        <div id="about-description">
+            <h1>About <span id="aboutme">Me</span></h1>
+
+            <p>I am a passionate Frontend Developer and Graphic Designer with a keen eye for detail. I specialize in
+                building responsive, user-friendly websites that blend functionality with aesthetics. With a strong
+                foundation in HTML, CSS, and JavaScript, I bridge the gap between creative design and technical
+                implementation to bring digital ideas to life.
+
+                Beyond the code, I am a strategic thinker. I focus on User Experience (UX) to ensure that every project
+                I work on solves real-world problems. I am constantly learning new technologies to stay ahead of the
+                curve, ensuring that the websites I build are modern, fast, and accessible to everyone. My goal is to
+                help businesses create a strong digital identity that leaves a lasting impression.</p>
+            <a href="#" id="about-btn" class="hero-btn">More About Me</a>
+        </div>
+    </section>
+
+    <section>
+        <div id="container">
+            <h1 class="sub-title">My <span>Services</span></h1>
+            <div class="service-list">
+                <div>
+                    <i class='bx bx-code-alt' style="color: rgb(12, 174, 39) ;"></i>
+                    <h2>Web Development</h2>
+                    <p>Custom website solutions built with modern technologies. We focus on speed, security, and
+                        responsive design to help your business grow online. </p>
+                </div>
+                <div>
+                    <i class='bx bx-edit-alt' style="color: rgb(12, 174, 39) ;"></i>
+                    <h2>Graphic Designing</h2>
+                    <p>Creative design services that define your brand. From logo creation to full marketing kits, we
+                        bring your visual ideas to life. </p>
+                </div>
+
+            </div>
+        </div>
     </section>
 
     <script src="app.js"></script>
