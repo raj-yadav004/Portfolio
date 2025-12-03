@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(244, 237, 237);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background: transparent;
+    padding: 1.2rem 10%;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+   
+
+}
+#logo{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: rgb(220, 220, 220);
+    font-weight: 700;
+
+}
+#nav a{
+    display:inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-left: 1.2rem;
+    font-weight: 500;
+    color: azure;
+    transition: .3s;
+}
+#nav a:hover{
+    color: rgb(53, 234, 83);
+    text-shadow:  0 0 20px rgb(53, 234, 83);
+    
+}
+#home{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 5%;
+    height: 100vh;
+    background-image: url(assets/images/138629859_65d701f2-ca06-4be4-a527-76bbf2c8b3f5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#home-content{
+    
+    font-size: 2rem;
+    width: 50%;
+    color: white;
+    
+    padding-left: 7rem;
+    
+       
+
+}
+#hero-content{
+    line-height: 1.1;
+}
+#hero-content h1{
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+#home-content h3{
+    font-weight: 500;
+    font-size: 2rem;
+    transition: slideTop .3s ease forwards;
+}
+#home-image{
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+       
+    
+    
+  
+}
+#hero-image{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-position: bottom;
+}
+#profession{
+    color:  rgb(42, 235, 74);
+    
+}
+
+#smi a {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   height: 40px;
+   width: 40px;
+   background: transparent;
+   border: 2px solid rgb(8, 125, 27);
+   border-radius: 100%;
+   text-decoration: none;
+   color:rgb(12, 174, 39) ;
+   font-size: 1.4rem;
+   margin: 30px 15px 30px 0 ;
+   transition: .2s;
+  
+}
+#smi a:hover{
+    color: white;
+    background-color:rgb(8, 125, 27) ;
+    transform: rotate(360deg);
+    box-shadow: 0 0 20px rgb(8, 125, 27);
+  
+}
+#hero-btn{
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    padding: 0.5rem 1.5rem ;
+    border-radius: 10rem;
+    background-color: rgb(8, 125, 27);
+    transition: .3s;
+}
+#hero-btn:hover{
+    box-shadow: 0 0 5px rgb(7, 119, 26),0 0 25px rgb(7, 119, 26),0 0 50px rgb(7, 119, 26),0 0 100px rgb(7, 119, 26),0 0 200px rgb(7, 119, 26);
+}
+@keyframes slideTop {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
