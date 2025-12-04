@@ -312,7 +312,7 @@ body {
 #skill-container {
     background-color: #4e4e4e4b;
     padding: 50px 0;
-    background: url(assets/images/ModernHerobackroud.jpg);
+    background: url(assets/images/skillsbackground.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -385,8 +385,76 @@ body {
   animation: grow 1s ease forwards 0.3s;
 }
 
+#project-container{
+    background-image: url(assets/images/green-gradient-abstract-background-empty-room-with-space-your-text-picture.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0;
+}
+#projects{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
 
+.cards:hover{
+    transform: translateY(-10px);
+}
+.cards{
+ width: 382px;
+ background-color: #c1c1c121;
+ -webkit-backdrop-filter: blur(5px);
+ backdrop-filter: blur(7px);
+ overflow: hidden;
+ border-radius: 10px;
+ margin: 20px;
+ transition: .3s;
+}
+.cards img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform .3s ease-in-out;
+}
+.cards:hover img{
+    transform: scale(1.1);
 
+}
+.card-content{
+    padding: 1.5rem;
+    color: white;
+}
+.card-content h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.card-content p{
+    color: #cccccc;
+    line-height: 1.3;
+    font-size: 1.2rem;
+
+}
+.card-content a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color:  rgb(12, 174, 39);
+    border-radius: 20px;
+    padding: 0.2rem 0.8rem;
+    margin-top: 20px;
+}
+#project-title{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    animation: slideTop 1s;
+}
+#project-title span{
+    color: rgb(12, 174, 39);
+}
 
 
 

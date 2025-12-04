@@ -22,7 +22,7 @@
             <a href="#home" style="--i:1" class="active">Home</a>
             <a href="#about" style="--i:2">About</a>
             <a href="#skill-title" style="--i:3">Skill</a>
-            <a href="#" style="--i:4">Portfolio</a>
+            <a href="#project-container" style="--i:4">Portfolio</a>
             <a href="#" style="--i:5">Contact</a>
         </nav>
         <span class="hamburger-menu"><i class='bx bx-menu-alt-left '></i></span>
@@ -43,7 +43,7 @@
             <a class="hero-btn" href="#">More About Me</a>
         </div>
         <div id="home-image">
-            <img id="hero-image" src="assets/images/rajimg (2).png" alt="images">
+            <img id="hero-image" loading="lazy" src="assets/images/rajimg (2).png" alt="images">
 
         </div>
 
@@ -52,7 +52,7 @@
 
     <section id="about">
         <div id="about-avatar-frame">
-            <img id="about-avatar" src="assets/images/poster.webp" alt="images">
+            <img id="about-avatar" loading="lazy" src="assets/images/poster.webp" alt="images">
         </div>
         <div id="about-description">
             <h1>About <span id="aboutme">Me</span></h1>
@@ -96,27 +96,27 @@
             <h1 id="skill-title">My <span>Skills</span></h1>
             <div class="skills">
                 <li>
-                    <img class="skill-icons" src="assets/images/html-5.png" alt="html icon">
+                    <img class="skill-icons" loading="lazy" src="assets/images/html-5.png" alt="html icon">
                     <h3>HTML</h3>
                     <span class="bar-back"><span class="bar-inner html"></span></span>
                 </li>
                 <li>
-                    <img class="skill-icons" src="assets/images/css-3.png" alt="css icon">
+                    <img class="skill-icons" loading="lazy" src="assets/images/css-3.png" alt="css icon">
                     <h3>CSS</h3>
                     <span class="bar-back"><span class="bar-inner css"></span></span>
                 </li>
                 <li>
-                    <img class="skill-icons" src="assets/images/js.png" alt="javascript icon">
+                    <img class="skill-icons" loading="lazy" src="assets/images/js.png" alt="javascript icon">
                     <h3>Javascript</h3>
                     <span class="bar-back"><span class="bar-inner javascript"></span></span>
                 </li>
                 <li>
-                    <img class="skill-icons" src="assets/images/social.png" alt="git icon">
+                    <img class="skill-icons" loading="lazy" src="assets/images/social.png" alt="git icon">
                     <h3>Git</h3>
                     <span class="bar-back"><span class="bar-inner git"></span></span>
                 </li>
                 <li>
-                    <img class="skill-icons" src="assets/images/java.png" alt="java icon">
+                    <img class="skill-icons" loading="lazy" src="assets/images/java.png" alt="java icon">
                     <h3>Java</h3>
                     <span class="bar-back"><span class="bar-inner java"></span></span>
                 </li>
@@ -124,6 +124,41 @@
         </div>
     </section>
 
+    <section>
+        <div id="project-container">
+            <h1 id="project-title" >My <span>Projects</span></h1>
+            <div id="projects">
+                <div class="cards card1">
+                    <img src="assets/images/Calculator.png" alt="">
+                    <div class="card-content">
+                        <h3>Calculator</h3>
+                        <p>Fully responsive JS calculator with keyboard support, accurate computation logic, and a clean, modern interface.
+                        </p>
+                        <a href="https://github.com/raj-yadav004/Calculator" target="_blank">Know more</a>
+                    </div>
+                </div>
+                <div class="cards card2">
+                    <img src="assets/images/Todolist.png" alt="">
+                    <div class="card-content">
+                        <h3>Todo List</h3>
+                        <p>nteractive To-Do List application using vanilla JS. Features persistent data storage, in-place task editing, and full list management (CRUD).
+                        </p>
+                        <a href="https://github.com/raj-yadav004/TODO-list-With-LocalStorage" target="_blank">Know more</a>
+                    </div>
+                </div>
+                <div class="cards card3">
+                    <img src="assets/images/Noteapp.png" alt="">
+                    <div class="card-content">
+                        <h3>Note App</h3>
+                        <p>Responsive note app using vanilla JS and localStorage. Features auto-save, dynamic note creation/deletion, and persistent content
+                        </p>
+                        <a href="https://github.com/raj-yadav004/Note-App" target="_blank">Know more</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <script src="app.js"></script>
 </body>
 
