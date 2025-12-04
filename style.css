@@ -494,4 +494,8 @@ body {
     #about-description {
         text-align: center;
     }
+    #hero-content h3{
+        font-size: 1.2rem;
+
+    }
 }
