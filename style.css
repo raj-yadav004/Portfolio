@@ -20,12 +20,13 @@ body {
     width: 100%;
     display: flex;
     background: transparent;
-    padding: 1.2rem 10%;
+    padding: 0.5rem 10%;
     justify-content: space-between;
     align-items: center;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.145);
 
 
 }
@@ -63,7 +64,7 @@ body {
 .hamburger-menu {
     position: absolute;
     font-size: 2.4rem;
-    top: 1rem;
+    top: 0.2rem;
     right: 1.5rem;
     color: white;
     display: none;
@@ -83,10 +84,11 @@ body {
 
 }
 
+
 #home-content {
 
     font-size: 2rem;
-    width: 50%;
+    width: 60%;
     color: white;
 
     padding-left: 7rem;
@@ -297,6 +299,91 @@ body {
     font-size: 5rem;
 }
 
+#skill-title {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+
+#skill-title span {
+    color: rgb(12, 174, 39);
+}
+
+#skill-container {
+    background-color: #4e4e4e4b;
+    padding: 50px 0;
+    background: url(assets/images/ModernHerobackroud.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.skills {
+    width: clamp(20rem,86vw,40rem);
+    margin: 60px auto;
+    background-color: #2626261d;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(20px);
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(26, 159, 64, 0.113), 0 10px 10px rgba(6, 129, 43, 0.11);
+}
+
+.skills li h3 {
+    color: white;
+    font-weight: 500;
+}
+
+.skills li {
+    list-style: none;
+    margin: 1.5rem;
+}
+
+.bar-back {
+    display: block;
+    width: 100%;
+    height: 12px;
+    background-color: #292929;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+
+.bar-inner {
+    display: block;
+    height: 100%;
+    width: 0;
+
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(16, 102, 31, 1) 0%, rgba(25, 255, 64, 1) 100%);
+}
+
+
+.skill-icons {
+    width: 20px;
+}
+
+.bar-back .html {
+  --w: 90%;
+  animation: grow 1s ease forwards 0.3s;
+}
+.bar-back .css {
+  --w: 80%;
+  animation: grow 1s ease forwards 0.3s;
+}
+.bar-back .javascript {
+  --w: 60%;
+  animation: grow 1s ease forwards 0.3s;
+}
+.bar-back .git {
+  --w: 86%;
+  animation: grow 1s ease forwards 0.3s;
+}
+.bar-back .java {
+  --w: 65%;
+  animation: grow 1s ease forwards 0.3s;
+}
 
 
 
@@ -314,9 +401,15 @@ body {
 
 
 
+@keyframes grow {
+    from {
+        width: 0;
+    }
 
-
-
+    to {
+        width: var(--w, 0%);
+    }
+}
 
 @keyframes slideTop {
     0% {
@@ -427,13 +520,11 @@ body {
 @media (max-width:700px) {
     #logo {
         position: relative;
-        left: 1.4rem;
-        top: 1.2rem;
+        /* left: 1.4rem;
+        top: 1.2rem; */
     }
 
-    .header {
-        padding: 0;
-    }
+   
 
 
     #container {
@@ -502,6 +593,7 @@ body {
         font-size: 1rem;
 
     }
+
     /* ----scrollbar----- */
 
     ::-webkit-scrollbar {
@@ -515,4 +607,9 @@ body {
     ::-webkit-scrollbar-thumb {
         background: linear-gradient(rgb(7, 119, 26), rgb(20, 214, 52));
     }
+
+    #home {
+        background-position: right;
+    }
+    
 }
