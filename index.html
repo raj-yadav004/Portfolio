@@ -195,10 +195,10 @@
 
                 </div>
                 <div class="contact-form">
-                    <form action="">
-                        <input required type="text" placeholder="Full Name" name="user" id="user" class="inputs" >
-                        <input required type="text" placeholder="Contact No" name="phone" id="phone" class="inputs">
-                        <textarea placeholder="Message" name="message" id="message" class="inputs"></textarea>
+                    <form id="form-contact" action="">
+                        <input required type="text" placeholder="Full Name" name="from_name" id="user" class="inputs" >
+                        <input required type="email" placeholder="Your Email" name="from_email" id="email" class="inputs">
+                        <textarea placeholder="message" name="message" id="message" class="inputs"></textarea>
                         <button id="form-button" type="submit" >Send Message</button>
                     </form>
                 </div>
@@ -206,10 +206,14 @@
         </div>
     </section>
     <footer>
-        
+
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script src="app.js"></script>
 </body>
 

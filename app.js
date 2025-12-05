@@ -59,3 +59,32 @@ function raf(time){
 requestAnimationFrame(raf); 
 
 
+// ------emailjs-----
+
+(function(){
+    emailjs.init("_kmqncF81wg7A-ggw");
+})();
+
+document.getElementById("form-contact").addEventListener('submit',function(event){
+    event.preventDefault(); 
+
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent; 
+    submitBtn.textContent = 'Sending....'
+    submitBtn.disabled = true; 
+    
+
+    emailjs.sendForm('service_q58fxd8','template_djlif56',this).then(function(){
+            alert('Message sent sucessfully! I will get back to you soon.'); 
+            document.getElementById('form-contact').reset(); 
+            submitBtn.textContent = originalText; 
+            submitBtn.disabled = false;
+    },function(error){
+        alert("Failed to send message. Please try again."); 
+        console.log(error); 
+        submitBtn.textContent = originalText; 
+        submitBtn.disabled = false; 
+
+    });
+
+});
