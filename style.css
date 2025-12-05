@@ -5,8 +5,9 @@
     font-family: "Poppins", sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+html,body {
+   height: 100%;
+   overflow: hidden;
 }
 
 body {
@@ -316,6 +317,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(60deg,rgb(4, 97, 19),rgb(33, 248, 69))1;
 }
 
 .skills {

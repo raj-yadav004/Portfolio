@@ -42,3 +42,20 @@ document.addEventListener("click",(e)=>{
         icon.classList.add('bx-menu-alt-left');
     }
 });
+
+
+//smooth scrolling
+const lenis = new Lenis({
+    duration:1.2,
+    smooth: true,
+    easing:(t) => 1 - Math.pow(1-t,3) // smooth ease out
+
+});
+function raf(time){
+    lenis.raf(time); 
+    requestAnimationFrame(raf); 
+
+}
+requestAnimationFrame(raf); 
+
+
