@@ -80,7 +80,7 @@ body {
     align-items: center;
     padding: 70px 5%;
     height: 100vh;
-    background-image: url(assets/images/greenbackgroundhero.webp);
+    background-image: url(assets/images/newherobackgorund.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -649,7 +649,7 @@ footer .smi a{
 
 #footer-tag h2{
     color: rgb(151, 151, 151);
-    font-size: 1.6rem;
+    font-size: clamp(0.4rem,8vw,1.6rem);
     font-weight:600;
 }
 #footer-tag h3{
@@ -903,9 +903,6 @@ footer .smi a{
         background: linear-gradient(rgb(7, 119, 26), rgb(20, 214, 52));
     }
 
-    #home {
-        background-position: right;
-    }
     #contacts{
         grid-template-columns:1fr ;
 
@@ -923,5 +920,32 @@ footer .smi a{
     
     #contact-title{
         margin-bottom: 0;
+    }
+    footer{
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    #footer-tag{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+    }
+    #footer-nav{
+        align-items: center;
+    }
+    #footer-tag h2{
+        text-align: center;
+    }
+    #footer-tag h3{
+        text-align: center;
     }
 }
