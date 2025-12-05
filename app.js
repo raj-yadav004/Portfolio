@@ -46,9 +46,13 @@ document.addEventListener("click",(e)=>{
 
 //smooth scrolling
 const lenis = new Lenis({
-    duration:1.2,
-    smooth: true,
-    easing:(t) => 1 - Math.pow(1-t,3) // smooth ease out
+    duration:1.0,
+    smoothWheel: true,
+    smoothTouch: false,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),//  smooth ease out
+    wheelMultiplier: 1.1, // Control scroll speed (default is 1)
+    touchMultiplier: 2,
+    infinite: false
 
 });
 function raf(time){
