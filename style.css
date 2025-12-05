@@ -868,5 +868,7 @@ body {
         margin-bottom: 5rem;
         margin-top: 5rem;
     }
-    
+    #contact-container{
+        background-position: right;
+    }
 }
