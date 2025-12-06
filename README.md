@@ -1,0 +1,55 @@
+## 👨‍💻 About The Project
+
+This repository serves as the source code for my personal portfolio website. It acts as a central hub to showcase my technical skills, past projects, and professional background.
+
+I designed this project using **Vanilla Web Technologies** (HTML, CSS, JS) to ensure:
+* **Performance:** No framework overhead; the site loads instantly.
+* **Control:** Pixel-perfect styling using custom CSS.
+* **Responsiveness:** Adapts smoothly to mobile, tablet, and desktop screens.
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Usage |
+| :--- | :--- |
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | Page structure and semantic markup |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) | Styling, Grid/Flexbox layouts, and animations |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Interactivity, DOM manipulation, and logic |
+
+---
+
+## ⚡ Getting Started
+
+Since this project is static, you can run it easily on your local machine.
+
+### Prerequisites
+You only need a modern web browser (Chrome, Firefox, Edge, etc.).
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/raj-yadav004/Portfolio.git](https://github.com/raj-yadav004/Portfolio.git)
+    ```
+
+2.  **Navigate to the project folder**
+    ```bash
+    cd Portfolio
+    ```
+
+3.  **Run the project**
+    * Simply double-click `index.html` to open it in your browser.
+    * **OR** if using VS Code, use the "Live Server" extension for the best experience.
+
+---
+
+## 📂 Project Structure
+
+```text
+Portfolio/
+├── index.html        # Main entry point
+├── css/              # Stylesheets (style.css, responsive.css)
+├── js/               # JavaScript files (script.js)
+├── assets/           # Images, icons, and media
+└── README.md         # Documentation
