@@ -948,4 +948,8 @@ footer .smi a{
     #footer-tag h3{
         text-align: center;
     }
+    #home{
+        background-image: url(assets/images/backgroundmob.webp);
+        background-position: bottom;
+    }
 }
