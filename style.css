@@ -4,12 +4,15 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-:root{
-    --primary: rgb(53, 234, 83); 
+
+:root {
+    --primary: rgb(53, 234, 83);
 }
-html,body {
-   height: 100%;
-   
+
+html,
+body {
+    height: 100%;
+
 }
 
 body {
@@ -80,10 +83,7 @@ body {
     align-items: center;
     padding: 70px 5%;
     height: 100vh;
-    background-image: url(assets/images/newherobackgorund.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
 
 }
 
@@ -268,11 +268,31 @@ body {
 #container {
     color: white;
     padding: 100px;
-    background-image: url(assets/images/darkGreen.jpg);
+    position: relative;
+    /* background-image: url(assets/images/darkGreen.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    
 
+}
+#container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    rgba(6, 182, 212, 0.12) 0%,
+    rgba(6, 182, 212, 0.06) 20%,
+    rgba(0, 0, 0, 0.0) 60%
+  );
+}
+
+#container > * {
+  position: relative;
+  z-index: 1;
 }
 
 .sub-title span {
@@ -302,6 +322,83 @@ body {
     font-size: 5rem;
 }
 
+
+#skill-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #000000; /* or your desired background */
+  overflow: hidden;
+}
+
+/* Animated Lines Background */
+#skill-container .lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#skill-container .line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+#skill-container .line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+#skill-container .line:nth-child(1) {
+  margin-left: -25%;
+}
+
+#skill-container .line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+
+#skill-container .line:nth-child(3) {
+  margin-left: 25%;
+}
+
+#skill-container .line:nth-child(3)::after {
+  animation-delay: 2.5s;
+}
+
+/* Your skill content - appears above the lines */
+#skill-container > *:not(.lines) {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
 #skill-title {
     text-align: center;
     color: white;
@@ -315,16 +412,16 @@ body {
 #skill-container {
     background-color: #4e4e4e4b;
     padding: 50px 0;
-    background: url(assets/images/skillsbackground.webp);
+    /* background: url(assets/images/skillsbackground.webp);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     border-bottom: 5px solid;
-    border-image: linear-gradient(60deg,rgb(4, 97, 19),rgb(33, 248, 69))1;
+    border-image: linear-gradient(60deg, rgb(4, 97, 19), rgb(33, 248, 69))1;
 }
 
 .skills {
-    width: clamp(20rem,86vw,40rem);
+    width: clamp(20rem, 86vw, 40rem);
     margin: 60px auto;
     background-color: #2626261d;
     -webkit-backdrop-filter: blur(5px);
@@ -332,7 +429,7 @@ body {
     padding: 1.8rem;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.233);
-    box-shadow:0  0 15px rgba(255, 255, 255, 0.132) ;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.132);
 }
 
 .skills li h3 {
@@ -371,164 +468,184 @@ body {
 }
 
 .bar-back .html {
-  --w: 90%;
-  animation: grow 1s ease forwards 0.3s;
-}
-.bar-back .css {
-  --w: 80%;
-  animation: grow 1s ease forwards 0.3s;
-}
-.bar-back .javascript {
-  --w: 60%;
-  animation: grow 1s ease forwards 0.3s;
-}
-.bar-back .git {
-  --w: 86%;
-  animation: grow 1s ease forwards 0.3s;
-}
-.bar-back .java {
-  --w: 65%;
-  animation: grow 1s ease forwards 0.3s;
+    --w: 90%;
+    animation: grow 1s ease forwards 0.3s;
 }
 
-#project-container{
+.bar-back .css {
+    --w: 80%;
+    animation: grow 1s ease forwards 0.3s;
+}
+
+.bar-back .javascript {
+    --w: 60%;
+    animation: grow 1s ease forwards 0.3s;
+}
+
+.bar-back .git {
+    --w: 86%;
+    animation: grow 1s ease forwards 0.3s;
+}
+
+.bar-back .java {
+    --w: 65%;
+    animation: grow 1s ease forwards 0.3s;
+}
+
+#project-container {
     background-image: url(assets/images/greengradientP.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 70px 0;
 }
-#projects{
+
+#projects {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
+
 }
 
-.cards:hover{
+.cards:hover {
     transform: translateY(-10px);
 }
-.cards{
- width: 382px;
- background-color: #c1c1c121;
- -webkit-backdrop-filter: blur(5px);
- backdrop-filter: blur(7px);
- overflow: hidden;
- border-radius: 10px;
- margin: 20px;
- transition: .3s;
- border: 2px solid rgba(255, 255, 255, 0.195);
+
+.cards {
+    width: 382px;
+    background-color: #c1c1c121;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: .3s;
+    border: 2px solid rgba(255, 255, 255, 0.195);
 }
-.cards img{
+
+.cards img {
     width: 100%;
     height: auto;
     display: block;
     transition: transform .3s ease-in-out;
 }
-.cards:hover img{
+
+.cards:hover img {
     transform: scale(1.1);
 
 }
-.card-content{
+
+.card-content {
     padding: 1.5rem;
     color: white;
 }
-.card-content h3{
+
+.card-content h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
-.card-content p{
+
+.card-content p {
     color: #cccccc;
     line-height: 1.3;
     font-size: 1.2rem;
 
 }
-.card-content a{
+
+.card-content a {
     display: inline-block;
     text-decoration: none;
     color: white;
-    background-color:  rgb(12, 174, 39);
+    background-color: rgb(12, 174, 39);
     border-radius: 20px;
     padding: 0.2rem 0.8rem;
     margin-top: 20px;
 }
-#project-title{
+
+#project-title {
     text-align: center;
     color: white;
     font-size: 3rem;
     margin-bottom: 1.5rem;
     animation: slideTop 1s;
 }
-#project-title span{
+
+#project-title span {
     color: rgb(12, 174, 39);
 }
 
-#contact-container{
+#contact-container {
     background-color: #000000;
-    padding: 5rem 0 ;
+    padding: 5rem 0;
     background: url(assets/images/contactbg7.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 2px solid rgba(255, 255, 255, 0.263);
-    
+
 }
-.contact-title{
-      text-align: center;
+
+.contact-title {
+    text-align: center;
     color: white;
     font-size: 3rem;
     margin-bottom: 7rem;
-   
-}
-#contacts{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-       
 
 }
-.contact-form form{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: clamp(18rem,50%,23rem);
-      align-items: center;
-      gap: 1.6rem;
+
+#contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+
 }
-.contact-form{
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: clamp(18rem, 50%, 23rem);
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.contact-form {
     display: flex;
     justify-content: center;
     align-items: center;
     /* background-color: bisque; */
 }
 
-#message{
+#message {
     width: 100%;
     height: 10rem;
-     
+
     border-radius: 10px;
     font-size: 1.2rem;
-   
-    
-    padding: 0.5rem 0 0.5rem 0.5rem ;
+
+
+    padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-#email{
+#email {
     width: 100%;
-   
+
     border-radius: 10px;
     font-size: 1.2rem;
-    padding: 0.8rem 0.5rem 0.8rem ;
+    padding: 0.8rem 0.5rem 0.8rem;
 
 }
-#user{
+
+#user {
     outline: none;
     width: 100%;
-    
+
     border-radius: 10px;
     font-size: 1.2rem;
-     padding: 0.8rem 0.5rem 0.8rem ;
+    padding: 0.8rem 0.5rem 0.8rem;
 }
-#form-button{
+
+#form-button {
     font-size: 1.2rem;
     width: 100%;
     padding: 0.5rem 0;
@@ -536,94 +653,106 @@ body {
     outline: none;
     border-radius: 10px;
     border: none;
-     box-shadow: 0 0 5px rgb(7, 119, 26),
+    box-shadow: 0 0 5px rgb(7, 119, 26),
         0 0 25px rgb(7, 119, 26);
-    background: linear-gradient( 60deg,rgb(12, 174, 39), rgb(28, 172, 52));
+    background: linear-gradient(60deg, rgb(12, 174, 39), rgb(28, 172, 52));
     color: white;
-    transition:  .3s ease;
+    transition: .3s ease;
 }
-#form-button:hover{
-     box-shadow: 0 0 5px rgb(7, 119, 26), 0 0 25px rgb(7, 119, 26), 0 0 50px rgb(7, 119, 26), 0 0 100px rgb(7, 119, 26), 0 0 200px rgb(7, 119, 26);
+
+#form-button:hover {
+    box-shadow: 0 0 5px rgb(7, 119, 26), 0 0 25px rgb(7, 119, 26), 0 0 50px rgb(7, 119, 26), 0 0 100px rgb(7, 119, 26), 0 0 200px rgb(7, 119, 26);
 }
-#socials{
+
+#socials {
     /* background-color: aqua; */
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    
-    
+
+
 }
-.socials-contact{
+
+.socials-contact {
     position: relative;
-    
+
     background-color: rgba(255, 255, 255, 0.121);
     display: flex;
     align-items: center;
     border-radius: 10px;
-    padding: 1rem 1.3rem ;
+    padding: 1rem 1.3rem;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.36);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.166);
-    
+
 }
-.socials-contact h2{
+
+.socials-contact h2 {
     color: white;
     margin-left: 1rem;
-    font-size: clamp(1.2rem,2vw,1.8rem);
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
     font-weight: 600;
     letter-spacing: 0.1rem;
 }
-.socials-contact img{
-    width: clamp(2.4rem,5vw,3rem);
+
+.socials-contact img {
+    width: clamp(2.4rem, 5vw, 3rem);
 }
-.contacts-social{
-    width: clamp(18rem,50%,28rem);
+
+.contacts-social {
+    width: clamp(18rem, 50%, 28rem);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    
-    
+
+
 }
+
 .arrow {
-      position: absolute;
+    position: absolute;
     right: -4rem;
     transition: all .3s ease;
 }
-.fa-circle-chevron-right{
+
+.fa-circle-chevron-right {
     color: var(--primary);
     font-size: 2.6rem;
-  
-       text-shadow: 0 0 5px rgb(7, 119, 26),
+
+    text-shadow: 0 0 5px rgb(7, 119, 26),
         0 0 25px rgb(7, 119, 26);
-     transition: all .3s ease;
+    transition: all .3s ease;
 }
-.fa-circle-chevron-right:hover{
-      text-shadow: 0 0 5px rgb(7, 119, 26), 0 0 25px rgb(7, 119, 26), 0 0 50px rgb(7, 119, 26), 0 0 100px rgb(7, 119, 26), 0 0 200px rgb(7, 119, 26);
+
+.fa-circle-chevron-right:hover {
+    text-shadow: 0 0 5px rgb(7, 119, 26), 0 0 25px rgb(7, 119, 26), 0 0 50px rgb(7, 119, 26), 0 0 100px rgb(7, 119, 26), 0 0 200px rgb(7, 119, 26);
     transform: translateY(-3px);
     transform: scale(1.06);
 }
-.socials-contact:hover .arrow{
-    right:2rem;
+
+.socials-contact:hover .arrow {
+    right: 2rem;
 }
 
 /* ------form inputs------- */
 
-.inputs{
+.inputs {
     background-color: rgba(255, 255, 255, 0.124);
-   color: white;
-   -webkit-backdrop-filter: blur(5px);
-   backdrop-filter: blur(5px);
-   border: 1px solid rgba(255, 255, 255, 0.446);
+    color: white;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.446);
 
 }
-.inputs:focus{
+
+.inputs:focus {
     outline: none;
 }
-.inputs::placeholder{
+
+.inputs::placeholder {
     color: white;
 }
 
@@ -631,51 +760,57 @@ body {
 
 /* ------footer----- */
 
-footer{
+footer {
     background-color: black;
     padding: 70px 10%;
     display: flex;
     justify-content: space-between;
 }
-footer .smi a{
-       animation: none;
-       opacity: 1;
-       font-size: 1.2rem;
-       color: rgb(92, 92, 92);
-       border: 2px solid rgb(92, 92, 92);
-       margin: 1rem 0.18rem;
+
+footer .smi a {
+    animation: none;
+    opacity: 1;
+    font-size: 1.2rem;
+    color: rgb(92, 92, 92);
+    border: 2px solid rgb(92, 92, 92);
+    margin: 1rem 0.18rem;
 
 }
 
-#footer-tag h2{
+#footer-tag h2 {
     color: rgb(151, 151, 151);
-    font-size: clamp(0.4rem,8vw,1.6rem);
-    font-weight:600;
+    font-size: clamp(0.4rem, 8vw, 1.6rem);
+    font-weight: 600;
 }
-#footer-tag h3{
+
+#footer-tag h3 {
     color: rgb(170, 170, 170);
     font-weight: 400;
-}#menu-links h1{
+}
+
+#menu-links h1 {
     color: rgb(139, 139, 139);
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
 }
 
-#footer-nav{
+#footer-nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    
+
 
 }
-#footer-nav a{
+
+#footer-nav a {
     text-decoration: none;
     font-size: 1.1rem;
     color: rgb(142, 142, 142);
 
 }
-#footer-nav a:hover{
+
+#footer-nav a:hover {
     color: white;
 }
 
@@ -786,11 +921,12 @@ footer .smi a{
         display: none;
     }
 
-.arrow{
+    .arrow {
         right: 1.2rem;
-        
+
     }
-    .fa-circle-chevron-right{
+
+    .fa-circle-chevron-right {
         font-size: 1.9rem;
     }
 
@@ -817,9 +953,9 @@ footer .smi a{
 }
 
 @media (max-width:700px) {
-   
 
-   
+
+
 
 
     #container {
@@ -838,7 +974,7 @@ footer .smi a{
 
     #nav {
         position: fixed;
-       
+
         top: 0;
         right: -50vw;
         /* Start off-screen */
@@ -903,53 +1039,73 @@ footer .smi a{
         background: linear-gradient(rgb(7, 119, 26), rgb(20, 214, 52));
     }
 
-    #contacts{
-        grid-template-columns:1fr ;
+    #contacts {
+        grid-template-columns: 1fr;
 
     }
-    .arrow{
+
+    .arrow {
         right: 2rem;
     }
-    .contacts-social{
+
+    .contacts-social {
         margin-bottom: 5rem;
-        
+
     }
-    #contact-container{
+
+    #contact-container {
         background-position: right;
     }
-    
-    #contact-title{
+
+    #contact-title {
         margin-bottom: 0;
     }
-    footer{
+
+    footer {
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: center;
     }
-    #footer-tag{
+
+    #footer-tag {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    #menu-links{
+
+    #menu-links {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-       
+
     }
-    #footer-nav{
+
+    #footer-nav {
         align-items: center;
     }
-    #footer-tag h2{
+
+    #footer-tag h2 {
         text-align: center;
     }
-    #footer-tag h3{
+
+    #footer-tag h3 {
         text-align: center;
     }
-    #home{
-        background-image: url(assets/images/backgroundmob.webp);
-        background-position: bottom;
-    }
+
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16, 185, 129, 0.25), transparent 70%);
+    pointer-events: none;
+}
+
+#home>* {
+    position: relative;
+    z-index: 1;
 }
